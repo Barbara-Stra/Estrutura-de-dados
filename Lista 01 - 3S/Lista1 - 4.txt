@@ -1,0 +1,8 @@
+4. Em uma PILHA necessitamos definir uma variável de ponteiro independente
+dos demais dados contidos no nó. Qual deve ser o tipo de ponteiro para
+apontar para o próximo nó e quanto ele consumirá de memória? Justifique
+sua resposta.
+
+. O ponteiro deverá ser do tipo do struct, a struct que o ponteiro do proximo está 
+contido. Ele consumirá 8 ou 4 bytes de memória, dependendo da arquitetura 32 
+ou 64 bits

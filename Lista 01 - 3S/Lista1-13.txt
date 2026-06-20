@@ -1,0 +1,22 @@
+13.Considere a seguinte estrutura de dados do tipo Pilha, na qual existem quatro
+valores armazenados e cujo topo é indicado pelo ponteiro Topo da pilha.
+
+A sequência de instruções expressas a seguir na forma de um pseudocódigo
+deve ser executada com base no estado atual da PILHA.
+As instruções PUSH e POP são instruções típicas de estruturas de dados do
+tipo Pilha, e representam, respectivamente, inserção e exclusão.
+1. Soma = 0;
+2. POP(x);
+3. Soma = Soma + x;
+4. x = 10;
+5. PUSH(x);
+6. x = 12;
+7. PUSH(x);
+8. POP(x);
+9. POP(x);
+10. Soma = Soma + x;
+
+Com base nessa sequência de instruções, apresente o valor final da variável
+soma.
+
+. o valor é 8
