@@ -1,5 +1,5 @@
-//12.Construa um programa em linguagem c que monte uma pilha de 15 elementos com valores aleatÛrios (n„o repetidos) 
-//entre 10 e 100. Posteriormente, monte duas pilhas (pares e Ìmpares), distribuindo e esfaziando a pilha original.
+//12.Construa um programa em linguagem c que monte uma pilha de 15 elementos com valores aleat√≥rios (n√£o repetidos) 
+//entre 10 e 100. Posteriormente, monte duas pilhas (pares e √≠mpares), distribuindo e esfaziando a pilha original.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,46 +11,57 @@ typedef struct apelido_no {
 }no;
 
 void imprimir_pilha(no *inicio);
-void inserir_pilha(int dado, no **incio);
+void inserir_pilha(int dado, no **inicio);
+void distribui_pilha(no **inicio, no **inicio_impar, no **inicio_par);
+void remover_pilha(no **inicio);
+
 int existe(int n, no *inicio);
 
 
 int main() {
-	no *inicio = NULL, *aux;
+	no *inicio = NULL, *inicio_impar = NULL, *inicio_par = NULL;
 	int i = 0, dado, e;
 	
 	srand(time(NULL));
 	
-	for(i = 0; i < 18; i++) {
+	for(i = 0; i < 15; i++) {
 		
 		if (inicio == NULL) {
-			inserir_pilha(rand() % 20, &inicio);
+			inserir_pilha((rand() % 90) + 10, &inicio);
 		} else {
 			do {
-				dado = rand() % 20;
+				dado = (rand() % 90) + 10;
 				
 				e = existe(dado, inicio);
 				if(e == 0) {
-					dado = rand() % 20;
+					dado = (rand() % 90) + 10;
 					e = existe(dado, inicio);
 				}
 				
 			} while (e == 1);
 			
-			inserir_pilha(dado, &inicio);
-			
+			inserir_pilha(dado, &inicio);	
 		}
-		
 	}
 
+	printf("\nPilha Normal\n");
 	imprimir_pilha(inicio);
-}
 	
+	distribui_pilha(&inicio, &inicio_impar, &inicio_par);
+	
+	printf("\n\nPilha Par\n");
+	imprimir_pilha(inicio_par);
+	
+	printf("\n\nPilha Impar\n");
+	imprimir_pilha(inicio_impar);
+	
+	
+}
+//----------------------------------------------------------------
 int existe(int n, no *inicio) {
 	
 	while (inicio) {
 		if (inicio->dado == n){
-			printf("oi\n");
 			return 1;	
 		} 
 		inicio = inicio->proximo;
@@ -70,7 +81,7 @@ void inserir_pilha(int dado, no **inicio){
 		
 		
 	} else {
-		printf("AlocaÁ„o n„o foi bem sucedida");
+		printf("Aloca√ß√£o n√£o foi bem sucedida");
 	}
 
 }
@@ -84,3 +95,32 @@ void imprimir_pilha(no *inicio) {
 		}
 		
 }
+
+void distribui_pilha(no **inicio, no **inicio_impar, no **inicio_par) {
+	no *aux = *inicio;
+	
+	while (aux) {
+		if (aux->dado % 2 == 0) {
+			inserir_pilha(aux->dado, inicio_par);
+		} else {
+			inserir_pilha(aux->dado, inicio_impar);
+		}
+		aux = aux->proximo;
+	}
+	
+	remover_pilha(inicio);
+	
+}
+
+void remover_pilha(no **inicio) {
+	no *aux = *inicio;
+	
+	while (*inicio) {
+		*inicio = (*inicio)->proximo;
+		free(aux);
+		aux = *inicio; 
+	}
+}
+
+
+
