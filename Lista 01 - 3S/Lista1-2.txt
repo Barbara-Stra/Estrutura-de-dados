@@ -1,0 +1,5 @@
+2. Como funcionam as operações (inserção e remoção) em uma PILHA e de
+uma FILA? Explique.
+
+. Pilha: Essas operações funcionam como pop e push. Quando o push é usado ele o ponteiro dele apontará para o próximo elemento, ou, se estiver no fim da pilha, o ponteiro será NULL, sendo assim ele sempre empilhará no começo da pilha. Já o pop, é usado sem parâmetros, ele sempre desempilhará o primeiro elemento da pilha.
+. Fila: Existe o enqueue e o dequeue. o enqueue serve para enfileirar, ele sempre vai enfileirar no fim na fila. Já o dequeue serve para desenfileirar, ele sempre fará isso no começo da fila. (isso sendo para um fila normal, sem prioridades, nem escolhas)

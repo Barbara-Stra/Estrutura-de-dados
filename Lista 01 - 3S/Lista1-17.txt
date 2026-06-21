@@ -1,0 +1,6 @@
+17.Dada a sequência de operações abaixo, indique o conteúdo final da PILHA
+(do topo para a base), supondo que ela se inicie vazia:
+push('A'), push('B'), pop(), push('C'), push('D'), pop(), pop(), push('E'), pop(),
+push(‘A’), push(‘Z’), push(‘K’), pop(), pop().
+
+Conteudo final do começo ao fim: A A 
