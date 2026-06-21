@@ -1,8 +1,0 @@
-5. Quais as possíveis operações que podemos efetuar em uma PILHA?
-Explique.
-
-As possíveis operações são pop, push, imprimir e esvaziar pilha.
-. A função pop serve para desempilhar 1 item, ela não tem passagem por parâmetros, ela usa um ponteiro temporário de apoio e deve liberar a memória do item retirado
-. A função push serve para empilhar 1 item, ela tem o item a ser empilhado como possível passagem por 			parâmetro
-. A função imprimir não tem parâmetros, e imprime a pilha com um laço while, enquanto o próximo não for NULL, ela continua imprimindo e aumentando o ponteiro temporário
-. A função esvaziar pilha tem como função liberar a memória de todos os elementos da pilha, e fazer com que o topo volte a ser NULL
