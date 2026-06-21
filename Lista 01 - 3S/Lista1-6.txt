@@ -1,4 +1,0 @@
-6. Em uma pilha, o que acontece se atribuirmos NULL para o ponteiro que
-aponta para o topo da PILHA?
-
-Nós perderemos acesso aos outros elementos na pilha

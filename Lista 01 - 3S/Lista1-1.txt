@@ -1,5 +1,0 @@
-1. Cite dois exemplos práticos de PILHA ao qual utilizamos no dia a dia na área
-computacional.
-
-. Control Z
-. A setinha para voltar do navegador
